@@ -1,0 +1,128 @@
+
+/* DESKTOP */
+@media (min-width: 1024px){
+    body {
+        height: 100vh;
+        background-image: linear-gradient(rgb(201, 201, 201), rgb(255, 255, 255));
+        background-size: cover;
+        background-position: top center;
+        background-repeat: $noRepetir;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    
+    header{
+            border-radius: 4px;
+            text-align: $alineado;
+            font-size: $font;
+            padding: 10px;
+    }
+
+   span {
+    margin-bottom: 5px;
+    padding: 20px;
+    height: 10px;
+    text-align: $alineado;
+    border-radius: 5px;
+    text-decoration: none;
+    &:hover{
+        border: 1px solid black;
+        background-color: rgb(147, 190, 147);
+    }
+    }
+   /* Articulos de galeria */
+
+   .articuloGaleria {
+    border-radius: 4px;
+    margin: 5px;
+    text-align: $alineado;
+    font-size: $font;
+    padding: 10px;
+    &:hover{
+        background-color: rgb(147, 190, 147);
+    }
+   }
+
+    article {
+    border-radius: 4px;
+    margin: 5px;
+    text-align: $alineado;
+    font-size: $font;
+    padding: 10px;
+   }
+
+    aside {
+    text-align: $alineado;
+    padding: 10px;
+    iframe{
+        width: 600px;
+        height: 400px;
+    }
+}
+
+    footer{
+    border-radius: 4px;
+    text-align: $alineado;
+    font-size: $font;
+    padding: 10px;
+
+}
+   /* GRIDS POR AREAS */
+
+   #gridAreas {
+    display: grid;
+    /* grid por areas */
+    grid-template-areas:
+    "cabeza menu menu"/* fila 1 */
+    "productos productos productos"/* fila 2 */
+    "video video video"/* fila 3 */
+    "pie pie pie "/* fila 4 */
+    ;
+    grid-template-columns: 15% auto 20%;
+    grid-template-rows: 1fr 2fr 2fr 1fr;
+}
+    #gridAreas2 {
+       display: grid;
+       /* grid por areas */
+       grid-template-areas:
+       "cabeza menu menu menu"/* fila 1 */
+       "video productos productos productos"/* fila 2 */
+       "pie pie pie pie "/* fila 3 */
+       ;
+       grid-template-columns: 25% 25% 25% 25%;
+       grid-template-rows: 1fr 3fr 1fr;
+   }
+
+   #gridAreas3 {
+    display: grid;
+    /* grid por areas */
+    grid-template-areas:
+    "cabeza menu menu menu"/* fila 1 */
+    "productos productos productos productos"/* fila 2 */
+    "pie pie pie pie "/* fila 3 */
+    ;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 1fr 3fr 1fr;
+}
+    /* MENU FLEX */
+    .flexMenu {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .flexMenu2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .productosFlex {
+        display: flex;
+        flex-flow: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+        align-content: center;
+   }
+   
+}
+

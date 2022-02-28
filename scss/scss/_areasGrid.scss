@@ -1,0 +1,17 @@
+ /* Nombrar las areas */
+ header {
+    grid-area: cabeza;
+ }
+ footer {
+    grid-area: pie;
+ }
+#productos {
+    grid-area: productos;
+ }
+
+ nav {
+    grid-area: menu;
+ }
+ aside {
+    grid-area: video;
+ }

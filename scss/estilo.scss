@@ -1,0 +1,52 @@
+@import "scss/estiloGeneral";
+ /*MAPAS*/
+
+$letra: (
+    titulo: rgb(23, 31, 21),
+    texto: rgb(88, 88, 88),
+);
+
+/*MAPGET*/
+.color-titulo{
+    color: map-get($letra , titulo );
+}
+.color-texto{
+    color: map-get($letra , texto );
+}
+
+ @import "scss/areasGrid";
+/*EXTEND*/
+.bordes{
+    border: 1px solid black;
+}
+.bordes2{
+    @extend .bordes;
+    background-color: rgb(175, 207, 171);
+}
+/* MIXIN*/
+
+@mixin tamaño ($alto, $ancho){
+    width: $ancho;
+    height: $alto;
+    }
+
+    img{
+        @include tamaño (100px, 100px);
+    }
+a{
+    color: black;
+    text-decoration: none;
+}
+$alineado: center;
+$noRepetir: no-repeat;
+$font: 0.75rem;
+
+
+@import "scss/responsiveDesktop";
+
+@import "scss/responsiveTablet";
+@import "scss/responsiveSmartphone";
+
+
+@import "scss/animacionTransicion";
+

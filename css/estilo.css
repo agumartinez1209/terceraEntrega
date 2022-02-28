@@ -1,0 +1,388 @@
+/* Estilos generales */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+/*MAPAS*/
+/*MAPGET*/
+.color-titulo {
+  color: #171f15;
+}
+
+.color-texto {
+  color: #585858;
+}
+
+/* Nombrar las areas */
+header {
+  grid-area: cabeza;
+}
+
+footer {
+  grid-area: pie;
+}
+
+#productos {
+  grid-area: productos;
+}
+
+nav {
+  grid-area: menu;
+}
+
+aside {
+  grid-area: video;
+}
+
+/*EXTEND*/
+.bordes, .bordes2 {
+  border: 1px solid black;
+}
+
+.bordes2 {
+  background-color: #afcfab;
+}
+
+/* MIXIN*/
+img {
+  width: 100px;
+  height: 100px;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+/* DESKTOP */
+@media (min-width: 1024px) {
+  body {
+    height: 100vh;
+    background-image: linear-gradient(#c9c9c9, white);
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  }
+
+  header {
+    border-radius: 4px;
+    text-align: center;
+    font-size: 0.75rem;
+    padding: 10px;
+  }
+
+  span {
+    margin-bottom: 5px;
+    padding: 20px;
+    height: 10px;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+  span:hover {
+    border: 1px solid black;
+    background-color: #93be93;
+  }
+
+  /* Articulos de galeria */
+  .articuloGaleria {
+    border-radius: 4px;
+    margin: 5px;
+    text-align: center;
+    font-size: 0.75rem;
+    padding: 10px;
+  }
+  .articuloGaleria:hover {
+    background-color: #93be93;
+  }
+
+  article {
+    border-radius: 4px;
+    margin: 5px;
+    text-align: center;
+    font-size: 0.75rem;
+    padding: 10px;
+  }
+
+  aside {
+    text-align: center;
+    padding: 10px;
+  }
+  aside iframe {
+    width: 600px;
+    height: 400px;
+  }
+
+  footer {
+    border-radius: 4px;
+    text-align: center;
+    font-size: 0.75rem;
+    padding: 10px;
+  }
+
+  /* GRIDS POR AREAS */
+  #gridAreas {
+    display: grid;
+    /* grid por areas */
+    grid-template-areas: "cabeza menu menu" "productos productos productos" "video video video" "pie pie pie ";
+    grid-template-columns: 15% auto 20%;
+    grid-template-rows: 1fr 2fr 2fr 1fr;
+  }
+
+  #gridAreas2 {
+    display: grid;
+    /* grid por areas */
+    grid-template-areas: "cabeza menu menu menu" "video productos productos productos" "pie pie pie pie ";
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 1fr 3fr 1fr;
+  }
+
+  #gridAreas3 {
+    display: grid;
+    /* grid por areas */
+    grid-template-areas: "cabeza menu menu menu" "productos productos productos productos" "pie pie pie pie ";
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 1fr 3fr 1fr;
+  }
+
+  /* MENU FLEX */
+  .flexMenu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .flexMenu2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .productosFlex {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: center;
+  }
+}
+@media (min-width: 481px) and (max-width: 1023px) {
+  body {
+    height: 100px;
+    background-image: linear-gradient(#979797, white);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  }
+
+  header {
+    border-radius: 4px;
+    text-align: center;
+    font-size: 0.75rem;
+    padding: 10px;
+  }
+
+  span {
+    margin-bottom: 5px;
+    padding: 20px;
+    height: 10px;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+
+  /* Articulos de galeria */
+  article {
+    border-radius: 4px;
+    margin: 5px;
+    text-align: center;
+    font-size: 0.75rem;
+    padding: 10px;
+  }
+
+  aside {
+    text-align: center;
+    padding: 10px;
+  }
+  aside iframe {
+    width: 560px;
+    height: 315px;
+  }
+
+  footer {
+    border-radius: 4px;
+    text-align: center;
+    font-size: 0.75rem;
+    padding: 10px;
+  }
+
+  /* GRIDS POR AREAS */
+  #gridAreas {
+    display: grid;
+    grid-template-areas: "cabeza cabeza cabeza" "menu menu menu" "productos productos productos" "video video video" "pie pie pie ";
+    grid-template-columns: 15% auto 20%;
+    grid-template-rows: 1fr 2fr 2fr 1fr;
+  }
+
+  #gridAreas2 {
+    display: grid;
+    grid-template-areas: "cabeza cabeza cabeza " " menu menu menu" "video productos productos" "pie pie pie ";
+    grid-template-columns: 30% 35% 35%;
+    grid-template-rows: 1fr 1fr 3fr;
+    grid-row-gap: 0;
+  }
+
+  /* MENU FLEX */
+  .flexMenu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .flexMenu2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .productosFlex {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: center;
+  }
+}
+@media (max-width: 480px) {
+  body {
+    height: 100px;
+    background-image: linear-gradient(#979797, white);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  }
+
+  header {
+    border-radius: 4px;
+    text-align: center;
+    font-size: 0.75rem;
+    padding: 10px;
+  }
+
+  span {
+    margin-bottom: 5px;
+    padding: 20px;
+    height: 10px;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+
+  /* Articulos de galeria */
+  article {
+    margin: 5px;
+    text-align: center;
+    padding: 10px;
+  }
+
+  aside {
+    text-align: center;
+    padding: 10px;
+  }
+
+  footer {
+    border-radius: 4px;
+    text-align: center;
+    font-size: 0.75rem;
+    padding: 10px;
+  }
+
+  /* GRIDS POR AREAS */
+  #gridAreas2 {
+    display: grid;
+    /* grid por areas */
+    grid-template-areas: "cabeza" "menu" "productos" "video" "pie";
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 1fr 2fr 2fr 1fr;
+    grid-row-gap: 0;
+  }
+
+  /* MENU FLEX */
+  .flexMenu2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .flexMenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .productosFlex {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+  }
+}
+/* TRANSICIONES */
+.transicion {
+  transition: all 2s;
+}
+.transicion:hover {
+  width: 300px;
+  height: 300px;
+}
+
+/* ANIMACIONES */
+.imagenAnimada {
+  animation-name: imagenAnimada;
+  animation-iteration-count: 1;
+  animation-duration: 2s;
+}
+
+@keyframes imagenAnimada {
+  0% {
+    opacity: 0;
+    transform: translateX(100vw);
+  }
+  25% {
+    transform: translateX(0vw);
+  }
+  75% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 1;
+  }
+}
+.videoAnimado {
+  animation-name: videoAnimado;
+  animation-iteration-count: 1;
+  animation-duration: 3s;
+}
+
+@keyframes videoAnimado {
+  0% {
+    border-radius: 50%;
+    transform: scale(0.75, 0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/*# sourceMappingURL=estilo.css.map */

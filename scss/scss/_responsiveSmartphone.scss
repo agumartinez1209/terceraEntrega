@@ -1,0 +1,85 @@
+
+@media (max-width: 480px){
+    body {
+        height: 100px;
+        background-image: linear-gradient(rgb(151, 151, 151), rgb(255, 255, 255));
+        background-position: top center;
+        background-repeat: $noRepetir;
+        background-size: cover;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+
+    header{
+            border-radius: 4px;
+            text-align: $alineado;
+            font-size: $font;
+            padding: 10px;
+    }
+   span {
+    margin-bottom: 5px;
+    padding: 20px;
+    height: 10px;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+
+   }
+
+   /* Articulos de galeria */
+   article {
+
+       margin: 5px;
+       text-align: center;
+       padding: 10px;
+   }
+  aside {
+    text-align: center;
+    padding: 10px;
+}
+
+footer{
+    border-radius: 4px;
+    text-align: center;
+    font-size: 0.75rem;
+    padding: 10px;
+
+}
+   /* GRIDS POR AREAS */
+
+    #gridAreas2 {
+       display: grid;
+       /* grid por areas */
+       grid-template-areas:
+       "cabeza"/* fila 1 */
+       "menu"/* fila 2 */
+       "productos"/* fila 3 */
+       "video"/* fila 4 */
+       "pie"/* fila 5 */
+       ;
+       grid-template-columns:100%;
+       grid-template-rows: 1fr 1fr 2fr 2fr 1fr     ;
+       grid-row-gap: 0;
+   }
+    /* MENU FLEX */
+
+    .flexMenu2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .flexMenu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+  .productosFlex {
+       display: flex;
+       flex-wrap: wrap;
+       align-content: center;
+   }
+
+}
+
+
